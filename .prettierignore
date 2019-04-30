@@ -1,0 +1,5 @@
+.vscode
+.cache
+dist
+package-lock.json
+mock

@@ -1,0 +1,67 @@
+{
+  "name": "ardan",
+  "version": "0.1.0",
+  "description": "rqsite dashboard and other services entry",
+  "homepage": "https://www.ricequant.com/dashboard",
+  "author": "anson.w <anson@ricequant.com>",
+  "private": true,
+  "main": "dist/index.html",
+  "browserslist": [
+    "last 3 Chrome versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.ricequant.com:7999/node/ardan.git"
+  },
+  "scripts": {
+    "mock": "./scripts/updep.sh && MOCK=true parcel watch src/index.html --public-url=/dashboard --no-autoinstall",
+    "start": "./scripts/updep.sh && parcel watch src/index.html --public-url=/dashboard --no-autoinstall",
+    "build": "./scripts/updep.sh && parcel build src/index.html --public-url=/dashboard --no-cache --no-source-maps --detailed-report",
+    "lint": "./scripts/lint.sh",
+    "clean": "rm -rf .cache dist",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@vue/component-compiler-utils": "^3.0.0",
+    "autoprefixer": "^9.5.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-vue": "^5.2.2",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-bundle-deep-hash": "^1.0.2",
+    "prettier": "^1.17.0",
+    "sass": "^1.19.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-prettier": "^5.1.0",
+    "stylelint-config-recess-order": "^2.0.2",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-scss": "^3.6.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dayjs": "^1.8.13",
+    "element-ui": "^2.7.2",
+    "highcharts": "^7.1.1",
+    "lodash": "^4.17.11",
+    "normalize.css": "^8.0.1",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.0",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "alias": {
+    "mock": "./mock"
+  }
+}
