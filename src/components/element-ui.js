@@ -1,6 +1,15 @@
 import Vue from "vue";
 
-import "/assets/scss/element-ui.scss";
+import "element-ui/lib/theme-chalk/base.css";
+import "element-ui/lib/theme-chalk/button.css";
+import "element-ui/lib/theme-chalk/button-group.css";
+import "element-ui/lib/theme-chalk/message.css";
+import "element-ui/lib/theme-chalk/message-box.css";
+import "element-ui/lib/theme-chalk/option.css";
+import "element-ui/lib/theme-chalk/select.css";
+import "element-ui/lib/theme-chalk/table.css";
+import "element-ui/lib/theme-chalk/table-column.css";
+import "element-ui/lib/theme-chalk/tooltip.css";
 
 import Button from "element-ui/lib/button";
 import ButtonGroup from "element-ui/lib/button-group";

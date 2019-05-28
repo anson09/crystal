@@ -12,9 +12,10 @@ export default function createRouter() {
   return new VueRouter({
     mode: "history",
     scrollBehavior: () => ({ y: 0 }),
+    base: process.env.PUBLIC_PATH,
     routes: [
-      { path: "/dashboard", component: pages.home },
-      { path: "/dashboard/*", component: pages[404] }
+      { path: "/", component: pages.home },
+      { path: "*", component: pages[404] }
     ]
   });
 }

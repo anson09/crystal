@@ -1,6 +1,6 @@
-# ARDAN
+# CRYSTAL
 
-> rqsite dashboard and other services entry
+> including workflow and basic tools, business project fork from here
 
 ## Commands
 
@@ -18,18 +18,17 @@ npm run clean : clear cache
 npm run deploy : sync dist, overwrite `.env.sample` to `.env`
 ```
 
-## Release
+## Branchs
 
-there exists jobs in jenkins for deploying different env
-
-https://www.ricequant.com/dashboard sync with master branch
-https://anka.ricequant.com/dashboard sync with dev branch
+master: <product visit url>
+dev: https://anka.ricequant.com/crystal
 
 ## Contributions
 
-1. Checkout an **commit_type/xxx** branch from dev
-   Or checkout an **hotfix/xxx** branch from master
+1. [`git 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=17269198)
 
-2. `API.md` contains all communication protocol
+2. [`lint 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=45875427)
 
-3. Keep with lint rules during coding and committing
+## Deploy
+
+[`部署协议`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52233128)

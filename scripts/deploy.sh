@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-export $(grep -v '^#' .env | xargs)
+. ./scripts/loadenv.sh
 echo '<< sync info >>'
 echo 'HOST: '$HOST
 echo 'SSH_PORT:' $SSH_PORT

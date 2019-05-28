@@ -1,6 +1,5 @@
 import Highcharts from "highcharts/highstock";
 import HighchartsMore from "highcharts/highcharts-more";
-import "/assets/scss/highcharts.scss";
 
 HighchartsMore(Highcharts);
 

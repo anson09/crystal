@@ -12,9 +12,7 @@ instance.interceptors.response.use(
     if (error.code === "ECONNABORTED") {
       Message({
         type: "error",
-        message: `${error.config.timeout}ms 请求${
-          error.config.url
-        }超时，请查看操作是否已成功或刷新重试`,
+        message: `${error.config.timeout}ms 请求${error.config.url}超时，请查看操作是否已成功或刷新重试`,
         showClose: true
       });
     }

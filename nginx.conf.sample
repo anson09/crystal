@@ -7,31 +7,16 @@ http {
     listen 8000;
     server_name _;
 
-    root <dist_dir>;
+    root <anka_dist_dir>;
     index index.html;
 
     location / {
       try_files $uri $uri/ /index.html;
     }
 
-    location /dashboard {
-      alias <dist_dir>;
-      try_files $uri $uri/ /dashboard/index.html;
-    }
-
-    location /ams {
-      alias <dist_dir>;
-      try_files $uri $uri/ /ams/index.html;
-    }
-
-    location /rqbeta {
-      alias <dist_dir>;
-      try_files $uri $uri/ /rqbeta/index.html;
-    }
-
-    location /hermes {
-      alias <dist_dir>;
-      try_files $uri $uri/ /hermes/index.html;
+    location /crystal {
+      alias <crystal_dist_dir>;
+      try_files $uri $uri/ /crystal/index.html;
     }
 
   }

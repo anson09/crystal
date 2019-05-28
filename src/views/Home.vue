@@ -1,5 +1,5 @@
 <template>
-  <div>ardan starter</div>
+  <div>crystal starter</div>
 </template>
 
 <script>

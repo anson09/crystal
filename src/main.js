@@ -1,8 +1,5 @@
-import "normalize.css";
-// import "./assets/icon/iconfont.css";
-import "./assets/scss/global.scss";
-import "./assets/scss/themes/index.scss";
-
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import Vue from "vue";
 import { sync } from "vuex-router-sync";
 
@@ -13,9 +10,9 @@ import createStore from "./store";
 import createRouter from "./router";
 import App from "./App.vue";
 
-document
-  .querySelector("body")
-  .classList.add(localStorage.theme === "dark" ? "theme-dark" : "theme-light");
+import "./assets/icon/iconfont.css";
+import "@rqjs/rqthemes";
+
 Object.keys(filters).forEach(key => Vue.filter(key, filters[key]));
 Vue.mixin(mixin);
 

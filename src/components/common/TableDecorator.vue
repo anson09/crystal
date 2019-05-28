@@ -1,30 +1,24 @@
 <template>
   <div>
     <div class="controller">
-      <el-select
-        v-if="customHeader"
-        v-model="columns"
-        size="small"
-        multiple
-        collapse-tags
-        placeholder="选择列"
-      >
-        <el-option
-          v-for="item in header"
-          :key="item.prop"
-          :label="item.label"
-          :value="item.prop"
-        >
-        </el-option>
-      </el-select>
-      <el-button
-        v-if="fold"
-        :icon="isFold ? 'el-icon-caret-bottom' : 'el-icon-caret-top'"
-        circle
-        plain
-        size="mini"
-        @click="isFold = !isFold"
-      ></el-button>
+      <el-dropdown v-if="customHeader" :hide-on-click="false">
+        <el-button plain size="small">
+          <i class="iconfont icon-menu"></i>
+        </el-button>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item v-for="item in header" :key="item.prop"
+            ><el-checkbox
+              :checked="columns.includes(item.prop)"
+              @change="change(item.prop)"
+              >{{ item.label }}</el-checkbox
+            >
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+      <el-button v-if="fold" plain size="small" @click="isFold = !isFold">
+        <span v-if="isFold">全部展开</span>
+        <span v-else>全部折叠</span>
+      </el-button>
     </div>
     <div :class="{ fold: isFold }"><slot></slot></div>
   </div>
@@ -53,18 +47,31 @@ export default {
       },
       immediate: true
     }
+  },
+  methods: {
+    change(prop) {
+      if (this.columns.includes(prop)) {
+        this.columns = this.columns.filter(i => i !== prop);
+      } else {
+        this.columns.push(prop);
+      }
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .controller {
-  float: right;
-  margin-bottom: 2px;
+  float: left;
+  margin-bottom: 7px;
 
   > * {
     margin-left: 10px;
   }
+}
+
+.iconfont {
+  font-size: 12px;
 }
 
 .el-select {

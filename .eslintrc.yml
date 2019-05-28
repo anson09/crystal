@@ -16,6 +16,8 @@ rules:
     - off
   no-multi-assign:
     - off
+  no-throw-literal:
+    - off
   no-param-reassign:
     - error
     - props: false
@@ -35,3 +37,7 @@ rules:
     - off
   import/no-unresolved:
     - off
+  # experiment
+  complexity:
+    - off
+    - 11
