@@ -1,5 +1,5 @@
 "*.vue":
-  - eslint --fix
+  - eslint --fix --max-warnings 0
   - stylelint --fix
   - prettier --write
   - git add
@@ -8,7 +8,7 @@
   - prettier --write
   - git add
 "*.scss":
-  - stylelint --fix
+  - stylelint --fix --max-warnings 0
   - prettier --write
   - git add
 "*.{html,yml,json,md}":
