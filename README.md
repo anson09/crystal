@@ -2,6 +2,10 @@
 
 > including workflow and basic tools, business project fork from here
 
+## Start
+
+global find and replace(perserve case) "crystal" to business project name
+
 ## Commands
 
 ```bash
