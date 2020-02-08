@@ -37,6 +37,8 @@ rules:
     - off
   import/no-unresolved:
     - off
+  import/extensions:
+    - off
   # experiment
   complexity:
     - off
