@@ -6,29 +6,29 @@ HighchartsMore(Highcharts);
 Highcharts.setOptions({
   chart: {
     height: 500,
-    styledMode: true
+    styledMode: true,
   },
 
   plotOptions: {
     series: {
-      animation: false
-    }
+      animation: false,
+    },
   },
   title: {
-    text: null
+    text: null,
   },
   yAxis: {
     plotLines: [
       {
         className: "plot-line-zero",
-        value: 0
-      }
-    ]
+        value: 0,
+      },
+    ],
   },
   credits: {
     text: "powered by ricequant",
-    href: "https://www.ricequant.com"
-  }
+    href: "https://www.ricequant.com",
+  },
 });
 
 export { Highcharts };

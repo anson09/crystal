@@ -13,7 +13,7 @@ import App from "./App.vue";
 import "./assets/icon/iconfont.css";
 import "@rqjs/rqthemes";
 
-Object.keys(filters).forEach(key => Vue.filter(key, filters[key]));
+Object.keys(filters).forEach((key) => Vue.filter(key, filters[key]));
 Vue.mixin(mixin);
 
 const store = createStore();
@@ -28,5 +28,5 @@ new Vue({
   el: "#app",
   store,
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 });

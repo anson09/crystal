@@ -7,10 +7,10 @@ const getters = {};
 const mutations = {
   CLEAR_STATE(s) {
     const i = state();
-    Object.keys(i).forEach(k => {
+    Object.keys(i).forEach((k) => {
       s[k] = i[k];
     });
-  }
+  },
 };
 
 const actions = {};
@@ -20,5 +20,5 @@ export default {
   state,
   getters,
   mutations,
-  actions
+  actions,
 };

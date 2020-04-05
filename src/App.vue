@@ -12,6 +12,6 @@ const TheHeader = () => import("/components/common/TheHeader.vue");
 
 export default {
   name: "App",
-  components: { TheHeader }
+  components: { TheHeader },
 };
 </script>

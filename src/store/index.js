@@ -5,7 +5,7 @@ import demo from "./modules/demo";
 Vue.use(Vuex);
 
 const modules = {
-  demo
+  demo,
 };
 
 function state() {}
@@ -15,17 +15,17 @@ const getters = {};
 const mutations = {
   CLEAR_STATE(s) {
     const i = state();
-    Object.keys(i).forEach(k => {
+    Object.keys(i).forEach((k) => {
       s[k] = i[k];
     });
-  }
+  },
 };
 
 const actions = {
   clearAllState({ commit }) {
     commit("CLEAR_STATE");
-    Object.keys(modules).forEach(i => commit(`${i}/CLEAR_STATE`));
-  }
+    Object.keys(modules).forEach((i) => commit(`${i}/CLEAR_STATE`));
+  },
 };
 
 export default function createStore() {
@@ -34,6 +34,6 @@ export default function createStore() {
     getters,
     mutations,
     actions,
-    modules
+    modules,
   });
 }

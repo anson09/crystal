@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 
 const pages = {
   home: () => import("/views/Home.vue"),
-  404: () => import("/views/NotFound.vue")
+  404: () => import("/views/NotFound.vue"),
 };
 
 export default function createRouter() {
@@ -15,7 +15,7 @@ export default function createRouter() {
     base: process.env.PUBLIC_PATH,
     routes: [
       { path: "/", component: pages.home },
-      { path: "*", component: pages[404] }
-    ]
+      { path: "*", component: pages[404] },
+    ],
   });
 }
