@@ -5,6 +5,8 @@ extends:
   - prettier/vue
 parserOptions:
   parser: babel-eslint
+globals:
+  rqevent: true
 rules:
   no-restricted-globals:
     - off

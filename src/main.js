@@ -1,5 +1,6 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import mitt from "mitt";
 import Vue from "vue";
 import { sync } from "vuex-router-sync";
 
@@ -13,6 +14,7 @@ import App from "./App.vue";
 import "./assets/icon/iconfont.css";
 import "@rqjs/rqthemes";
 
+window.rqevent = mitt();
 Object.keys(filters).forEach((key) => Vue.filter(key, filters[key]));
 Vue.mixin(mixin);
 
