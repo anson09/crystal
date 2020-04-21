@@ -17,6 +17,9 @@ Highcharts.setOptions({
   title: {
     text: null,
   },
+  time: {
+    useUTC: false,
+  },
   yAxis: {
     plotLines: [
       {
