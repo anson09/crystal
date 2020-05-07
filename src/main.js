@@ -1,5 +1,6 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import "normalize.css";
 import mitt from "mitt";
 import Vue from "vue";
 import { sync } from "vuex-router-sync";
