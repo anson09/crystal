@@ -43,5 +43,5 @@ rules:
     - off
   # experiment
   complexity:
-    - off
+    - error
     - 11
