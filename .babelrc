@@ -1,0 +1,14 @@
+// change to babel.config.js,will shake polyfill in parcel 2
+
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "usage",
+        "modules": false,
+        "corejs": { "version": 3, "proposals": true }
+      }
+    ]
+  ]
+}
