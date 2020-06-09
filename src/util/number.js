@@ -14,4 +14,4 @@ function percentage(num, precision) {
   return `${(num * 100).toFixed(accuracy)}%`;
 }
 
-export { isNumber, float, percentage };
+export { float, percentage };

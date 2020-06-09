@@ -8,7 +8,6 @@ http {
     server_name _;
 
     root <anka_dist_dir>;
-    index index.html;
 
     location / {
       try_files $uri $uri/ /index.html;
