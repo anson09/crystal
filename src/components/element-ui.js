@@ -13,12 +13,13 @@ import ButtonGroup from "element-ui/lib/button-group";
 import Message from "element-ui/lib/message";
 import MessageBox from "element-ui/lib/message-box";
 import Option from "element-ui/lib/option";
-import Select from "element-ui/lib/select";
+
+const Select = () => import("element-ui/lib/select");
 
 Vue.use(Button);
 Vue.use(ButtonGroup);
 Vue.use(Option);
-Vue.use(Select);
+Vue.component(Select.name, Select);
 
 Vue.prototype.$message = Message;
 Vue.prototype.$alert = MessageBox.alert;
