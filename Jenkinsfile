@@ -16,7 +16,7 @@ pipeline {
             }
             stage('Deploy') {
                 steps {
-                    sh "rsync -avh --stats --delete -e 'ssh -p 28888' dist/ rice@anka:/static/crystal/"
+                    sh "rsync -avh --stats --delete -e 'ssh -p 28888' dist/ rice@anka:/static/st/crystal/"
                 }
             }
     }
