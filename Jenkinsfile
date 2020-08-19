@@ -3,14 +3,19 @@ pipeline {
     agent any
 
     stages {
-            stage('Prepare') {
+            stage('UAT Prepare') {
                 steps {
                     sh "echo -e 'CDN=https://anka.qcdn.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
-                    sh "npm run clean"
+                }
+            }
+            stage('Online Prepare') {
+                steps {
+                    sh "echo -e 'CDN=https:///assets.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
                 }
             }
             stage('Build') {
                 steps {
+                    sh "npm run clean"
                     sh "npm run build"
                 }
             }
