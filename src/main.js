@@ -7,7 +7,6 @@ import { sync } from "vuex-router-sync";
 
 import "./components/element-ui";
 import * as filters from "./util/filters";
-import mixin from "./util/mixin";
 import createStore from "./store";
 import createRouter from "./router";
 import App from "./App.vue";
@@ -17,7 +16,6 @@ import "@rqjs/rqthemes";
 
 window.rqevent = mitt();
 Object.keys(filters).forEach((key) => Vue.filter(key, filters[key]));
-Vue.mixin(mixin);
 
 const store = createStore();
 const router = createRouter();
