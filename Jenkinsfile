@@ -24,7 +24,7 @@ pipeline {
                      branch 'dev'
                 }
                 steps {
-                    sh "rsync -avh --stats --delete -e 'ssh -p 28888' dist/ jenkins@anka.ricequant.com:/static/st/crystal"
+                    sh "rsync -aczvh --stats --delete -e 'ssh -p 28888' dist/ jenkins@anka.ricequant.com:/static/st/crystal"
                 }
             }
             stage('Online Deploy') {
@@ -32,7 +32,7 @@ pipeline {
                      branch 'release'
                 }
                 steps {
-                    sh "rsync -avh --stats --delete dist/ /static/crystal"
+                    sh "rsync -aczvh --stats --delete dist/ /static/crystal"
                     build job: 'ship'
                 }
             }            
