@@ -4,6 +4,7 @@ import mitt from "mitt";
 import Vue from "vue";
 import { sync } from "vuex-router-sync";
 
+import "normalize.css";
 import "./components/element-ui";
 import * as filters from "./util/filters";
 import createStore from "./store";
