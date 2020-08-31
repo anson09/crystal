@@ -14,7 +14,7 @@ const ElSelect = () => import("element-ui/lib/select");
 Vue.use(Button);
 Vue.use(ButtonGroup);
 Vue.use(Option);
-Vue.component(ElSelect.name, ElSelect);
+Vue.component("ElSelect", ElSelect);
 
 Vue.prototype.$message = Message;
 Vue.prototype.$alert = MessageBox.alert;
