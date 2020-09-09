@@ -4,7 +4,7 @@ module.exports = {
       ? require("postcss-css-variables")({
           preserve: true,
           preserveInjectedVariables: false,
-          variables: require("@rqjs/rqthemes/light.json"),
+          variables: require("@rqjs/rqthemes/lib/light.json"),
         })
       : []
   ),

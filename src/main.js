@@ -12,7 +12,9 @@ import createRouter from "./router";
 import App from "./App.vue";
 
 import "./assets/icon/iconfont.css";
-import "@rqjs/rqthemes";
+import "@rqjs/rqthemes/lib/element-light.css";
+import "@rqjs/rqthemes/lib/element-dark.css";
+import "@rqjs/rqthemes/lib/legacy.css";
 
 window.rqevent = mitt();
 Object.keys(filters).forEach((key) => Vue.filter(key, filters[key]));
