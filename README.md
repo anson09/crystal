@@ -24,15 +24,16 @@ npm run deploy : sync dist, overwrite `.env.sample` to `.env`
 
 ## Branchs
 
-master: <product visit url>
-dev: https://anka.ricequant.com/crystal
+master: product visit url  
+dev: https://anka.ricequant.com:8085/crystal
 
 ## Contributions
 
-1. [`git 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=17269198)
-
-2. [`lint 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=45875427)
+- [`代码规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=45875427)
+- [`git 流程`](http://wiki.ricequant.com/pages/viewpage.action?pageId=17269198)
+- [`图标信息`](http://wiki.ricequant.com/pages/viewpage.action?pageId=19562729)
 
 ## Deploy
 
-[`部署协议`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52233128)
+- [`部署信息`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52233128)
+- [`发包协议`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52232790)

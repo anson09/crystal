@@ -3,14 +3,20 @@ pipeline {
     agent any
 
     stages {
-            stage('UAT Prepare') {
+            stage('ST Prepare') {
+                when {
+                     branch 'dev'
+                }
                 steps {
-                    sh "echo -e 'CDN=https://anka.qcdn.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
+                    sh "echo -e 'PUBLIC_PATH=/crystal/' > .env"
                 }
             }
             stage('Online Prepare') {
+                when {
+                     branch 'release'
+                }
                 steps {
-                    sh "echo -e 'CDN=https:///assets.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
+                    sh "echo -e 'CDN=https://assets.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
                 }
             }
             stage('Build') {
@@ -19,7 +25,7 @@ pipeline {
                     sh "npm run build"
                 }
             }
-            stage('UAT Deploy') {
+            stage('ST Deploy') {
                 when {
                      branch 'dev'
                 }
