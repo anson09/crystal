@@ -41,7 +41,3 @@ rules:
     - off
   import/extensions:
     - off
-  # experiment
-  complexity:
-    - error
-    - 11
