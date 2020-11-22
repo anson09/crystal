@@ -1,13 +1,14 @@
-// change to babel.config.js,will shake polyfill in parcel 2
+// parcel 2 could use babel.config.js, and {"useBuiltIns": "usage"} enabled by default
+// parcel 1 ignore useBuiltIns config
 
 {
   "presets": [
     [
-      "@babel/env",
+      "@babel/preset-env",
       {
         "useBuiltIns": "usage",
-        "modules": false,
         "corejs": { "version": 3, "proposals": true }
+        // baebl target config respects .browserslistrc
       }
     ]
   ]
