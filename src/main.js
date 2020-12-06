@@ -5,16 +5,19 @@ import Vue from "vue";
 import { sync } from "vuex-router-sync";
 
 import "normalize.css";
+import "./assets/icon/iconfont.css";
+import "@rqjs/rqthemes/lib/element-light.css";
+import "@rqjs/rqthemes/lib/element-dark.css";
+import "@rqjs/rqthemes/lib/vars.css";
+import "@rqjs/rqthemes/lib/legacy.css";
+import "@rqjs/rqcomponents/lib/theme/base";
+import "@rqjs/rqcomponents/lib/theme/base.css";
+
 import "./components/element-ui";
 import * as filters from "./util/filters";
 import createStore from "./store";
 import createRouter from "./router";
 import App from "./App.vue";
-
-import "./assets/icon/iconfont.css";
-import "@rqjs/rqthemes/lib/element-light.css";
-import "@rqjs/rqthemes/lib/element-dark.css";
-import "@rqjs/rqthemes/lib/legacy.css";
 
 window.rqevent = mitt();
 Object.keys(filters).forEach((key) => Vue.filter(key, filters[key]));

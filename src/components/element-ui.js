@@ -1,8 +1,5 @@
 import Vue from "vue";
 
-import "@rqjs/rqcomponents/lib/theme/base";
-import "@rqjs/rqcomponents/lib/theme/base.css";
-
 import Button from "element-ui/lib/button";
 import ButtonGroup from "element-ui/lib/button-group";
 import Message from "element-ui/lib/message";
