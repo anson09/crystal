@@ -1,6 +1,3 @@
-import "core-js/stable";
-import "regenerator-runtime/runtime";
-import mitt from "mitt";
 import Vue from "vue";
 import { sync } from "vuex-router-sync";
 
@@ -19,7 +16,6 @@ import createStore from "./store";
 import createRouter from "./router";
 import App from "./App.vue";
 
-window.rqevent = mitt();
 Object.keys(filters).forEach((key) => Vue.filter(key, filters[key]));
 
 const store = createStore();
