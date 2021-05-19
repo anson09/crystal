@@ -9,9 +9,11 @@
     "url": "ssh://git@git.ricequant.com:7999/node/crystal.git"
   },
   "scripts": {
-    "mock": ". ./scripts/loadenv.sh && ./scripts/updep.sh && MOCK=true parcel watch src/index.html --public-url=$PUBLIC_PATH --no-autoinstall",
-    "start": ". ./scripts/loadenv.sh && ./scripts/updep.sh && parcel watch src/index.html --public-url=$PUBLIC_PATH --no-autoinstall",
-    "build": ". ./scripts/loadenv.sh && ./scripts/updep.sh && parcel build src/index.html --public-url=$CDN$PUBLIC_PATH --no-cache --no-source-maps --detailed-report",
+    "bundle:dev": "if $HTTPS; then parcel watch src/index.html --no-autoinstall --public-url $PUBLIC_PATH --https --cert $CERT --key $KEY;else parcel watch src/index.html --no-autoinstall --public-url $PUBLIC_PATH;fi",
+    "bundle:pro": "parcel build src/index.html --public-url=$CDN$PUBLIC_PATH --no-cache --no-source-maps --detailed-report",
+    "mock": ". ./scripts/loadenv.sh && ./scripts/updep.sh && MOCK=true  npm run bundle:dev",
+    "start": ". ./scripts/loadenv.sh && ./scripts/updep.sh &&  npm run bundle:dev ",
+    "build": ". ./scripts/loadenv.sh && ./scripts/updep.sh && npm run bundle:pro",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf .cache dist",
     "deploy": "./scripts/deploy.sh",
