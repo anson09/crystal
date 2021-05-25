@@ -1,18 +1,13 @@
 <template>
-  <main><img src="/assets/img/404.png" /></main>
+  <RqNotFound />
 </template>
 
 <script>
+import RqNotFound from "@rqjs/rqcomponents/lib/rq-not-found";
+import "@rqjs/rqcomponents/lib/theme/rq-not-found.css";
+
 export default {
   name: "NotFound",
+  components: { RqNotFound },
 };
 </script>
-
-<style lang="scss" scoped>
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-</style>
