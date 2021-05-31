@@ -30,7 +30,7 @@ pipeline {
                      branch 'dev'
                 }
                 steps {
-                    sh "rsync -aczvh --stats --delete -e 'ssh -p 28888' dist/ jenkins@anka.ricequant.com:/static/st/crystal"
+                    sh "rsync -aczvh --stats --delete dist/ jenkins@172.30.0.14:/static/st/crystal"
                 }
             }
             stage('Online Deploy') {
