@@ -24,7 +24,7 @@ npm run deploy : sync dist, overwrite `.env.sample` to `.env`
 
 ## Branchs
 
-master: product visit url  
+main: product visit url  
 dev: https://anka.ricequant.com:8085/crystal
 
 ## Contributions
