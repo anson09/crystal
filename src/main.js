@@ -6,7 +6,7 @@ import "./assets/icon/iconfont.css";
 import "@rqjs/rqthemes/lib/element-light.css";
 import "@rqjs/rqthemes/lib/element-dark.css";
 import "@rqjs/rqthemes/lib/vars.css";
-import "@rqjs/rqthemes/lib/legacy.css";
+import "@rqjs/rqthemes/lib/index.css";
 import "@rqjs/rqcomponents/lib/theme/base";
 import "@rqjs/rqcomponents/lib/theme/base.css";
 
