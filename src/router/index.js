@@ -4,7 +4,7 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const pages = {
-  home: () => import("/views/Home.vue"),
+  home: () => import("/views/HomePage.vue"),
   404: () => import("/views/NotFound.vue"),
 };
 
