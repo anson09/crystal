@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 pipeline {
-    agent any
+    agent { label 'linux-build' }
 
     stages {
             stage('ST Prepare') {
@@ -9,6 +9,14 @@ pipeline {
                 }
                 steps {
                     sh "echo -e 'PUBLIC_PATH=/crystal/' > .env"
+                }
+            }
+            stage('UAT Prepare') {
+                when {
+                     branch 'master'
+                }
+                steps {
+                    sh "echo -e 'CDN=https://anka.qcdn.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
                 }
             }
             stage('Online Prepare') {
@@ -22,7 +30,7 @@ pipeline {
             stage('Build') {
                 steps {
                     sh "npm run clean"
-                    sh "npm run build"
+                    sh "PARCEL_WORKER_BACKEND=process npm run build"
                 }
             }
             stage('ST Deploy') {
@@ -31,6 +39,14 @@ pipeline {
                 }
                 steps {
                     sh "rsync -aczvh --stats --delete dist/ jenkins@172.30.0.2:/static/st/crystal"
+                }
+            }
+            stage('UAT Deploy') {
+                when {
+                     branch 'master'
+                }
+                steps {
+                    sh "rsync -aczvh --stats --delete dist/ jenkins@172.30.0.2:/static/uat/crystal"
                 }
             }
             stage('Online Deploy') {

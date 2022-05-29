@@ -1,13 +1,13 @@
 <template>
-  <RqNotFound />
+  <div>
+    <img src="../assets/img/404.png" />
+  </div>
 </template>
 
-<script>
-import RqNotFound from "@rqjs/rqcomponents/lib/rq-not-found";
-import "@rqjs/rqcomponents/lib/theme/rq-not-found.css";
-
-export default {
-  name: "NotFound",
-  components: { RqNotFound },
-};
-</script>
+<style lang="scss" scoped>
+div {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+</style>

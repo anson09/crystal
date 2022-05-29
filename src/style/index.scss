@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
+
+  &.theme-light {
+    color-scheme: light;
+  }
+
+  &.theme-dark {
+    color-scheme: dark;
+  }
+}

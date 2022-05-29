@@ -1,19 +1,8 @@
-import Vue from "vue";
+import { ElButton } from "element-plus";
+import "element-plus/es/components/button/style/css.mjs";
+import "element-plus/es/components/message/style/css.mjs";
 
-import Button from "element-ui/lib/button";
-import ButtonGroup from "element-ui/lib/button-group";
-import Message from "element-ui/lib/message";
-import MessageBox from "element-ui/lib/message-box";
-import Option from "element-ui/lib/option";
-
-const ElSelect = () => import("element-ui/lib/select");
-
-Vue.use(Button);
-Vue.use(ButtonGroup);
-Vue.use(Option);
-Vue.component("ElSelect", ElSelect);
-
-Vue.prototype.$message = Message;
-Vue.prototype.$alert = MessageBox.alert;
-Vue.prototype.$confirm = MessageBox.confirm;
-Vue.prototype.$prompt = MessageBox.prompt;
+const components = [ElButton];
+export default function useElement(app) {
+  components.forEach((component) => app.use(component));
+}

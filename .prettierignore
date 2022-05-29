@@ -1,5 +1,5 @@
 .vscode
-.cache
+.parcel-ache
 dist
 package-lock.json
 mock

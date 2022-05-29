@@ -1,37 +1,18 @@
 import Highcharts from "highcharts/highstock";
-import HighchartsMore from "highcharts/highcharts-more";
+import gridLight from "highcharts/themes/grid-light";
+// import darkUnica from "highcharts/themes/dark-unica";
 
-HighchartsMore(Highcharts);
-
+gridLight(Highcharts);
 Highcharts.setOptions({
   chart: {
     height: 500,
-    styledMode: true,
   },
-
-  plotOptions: {
-    series: {
-      animation: false,
-    },
-  },
-  title: {
-    text: null,
-  },
-  time: {
-    useUTC: false,
-  },
-  yAxis: {
-    plotLines: [
-      {
-        className: "plot-line-zero",
-        value: 0,
-      },
-    ],
+  accessibility: {
+    enabled: false,
   },
   credits: {
-    text: "powered by ricequant",
-    href: "https://www.ricequant.com",
+    enabled: false,
   },
 });
 
-export { Highcharts };
+export default Highcharts;

@@ -7,16 +7,6 @@ http {
     listen 443 ssl http2;
     server_name <config in /etc/hosts> ;
 
-
-    location / {
-      302 /welcome/;
-    }
-
-    location /welcome {
-      alias <anka_dist_dir>;
-      try_files $uri /welcome/index.html;
-    }
-
     location /crystal {
       alias <crystal_dist_dir>;
       try_files $uri /crystal/index.html;
