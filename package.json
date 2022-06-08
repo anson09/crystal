@@ -4,6 +4,7 @@
   "description": "init repo for web project",
   "homepage": "https://anka.ricequant.com/crytstal",
   "source": "src/index.html",
+  "type": "module",
   "engines": {
     "node": ">=16.x"
   },
@@ -14,7 +15,7 @@
     "bundle:pro": "parcel build --public-url=$CDN$PUBLIC_PATH --detailed-report",
     "mock": ". ./scripts/loadenv.sh;./scripts/updep.sh;MOCK=true npm run bundle:dev",
     "dev": ". ./scripts/loadenv.sh;./scripts/updep.sh;npm run bundle:dev ",
-    "build": ". ./scripts/loadenv.sh;./scripts/updep.sh;npm run bundle:pro",
+    "build": ". ./scripts/loadenv.sh;./scripts/updep.sh;npm run bundle:pro;./scripts/sitemap.js",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf .parcel-cache dist",
     "deploy": "./scripts/deploy.sh",
@@ -30,13 +31,13 @@
     "@commitlint/config-conventional": "^17.0.2",
     "@parcel/transformer-sass": "^2.6.0",
     "@parcel/transformer-vue": "^2.6.0",
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-vue": "^9.0.1",
+    "eslint-plugin-vue": "^9.1.0",
     "husky": "^8.0.1",
-    "lint-staged": "^12.5.0",
+    "lint-staged": "^13.0.0",
     "parcel": "^2.6.0",
     "postcss": "^8.4.14",
     "postcss-html": "^1.4.1",
@@ -47,8 +48,10 @@
     "stylelint-config-standard-scss": "^4.0.0"
   },
   "dependencies": {
-    "dayjs": "^1.11.2",
-    "element-plus": "^2.2.2",
+    "cheerio": "^1.0.0-rc.11",
+    "dayjs": "^1.11.3",
+    "dotenv": "^16.0.1",
+    "element-plus": "^2.2.4",
     "highcharts": "^10.1.0",
     "jwt-decode": "^3.1.2",
     "ky": "^0.30.0",
@@ -56,7 +59,7 @@
     "lottie-web": "^5.9.4",
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.14",
-    "vue": "^3.2.36",
+    "vue": "^3.2.37",
     "vue-router": "^4.0.15"
   },
   "alias": {

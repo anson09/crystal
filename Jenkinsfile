@@ -24,7 +24,7 @@ pipeline {
                      branch 'release'
                 }
                 steps {
-                    sh "echo -e 'CDN=https://assets.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
+                    sh "echo -e 'ORIGIN=https://www.ricequant.com\nCDN=https://assets.ricequant.com\nPUBLIC_PATH=/crystal/' > .env"
                 }
             }
             stage('Build') {
