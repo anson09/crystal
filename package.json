@@ -9,6 +9,11 @@
     "node": ">=16.x"
   },
   "browserslist": "since 2022",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "./scripts/updep.sh; parcel --lazy --open",
     "bundle:dev": "if $HTTPS; then parcel watch --no-autoinstall --public-url $PUBLIC_PATH --https --cert $CERT --key $KEY --host localhost;else parcel watch --no-autoinstall --public-url $PUBLIC_PATH;fi",
