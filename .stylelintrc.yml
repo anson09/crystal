@@ -6,10 +6,12 @@ overrides:
       - "**/*.vue"
     customSyntax: postcss-html
 rules:
-  selector-pseudo-element-no-unknown:
+  selector-pseudo-class-no-unknown:
     - true
-    - ignorePseudoElements:
-        - v-deep
+    - ignorePseudoClasses:
+        - deep
+        - global
+        - slotted
   selector-class-pattern:
     - "^([a-z][a-z0-9]*)((-|_)+[a-z0-9]+)*$"
     - message: "Expected class selector to be kebab-case"
