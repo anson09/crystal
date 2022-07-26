@@ -70,5 +70,10 @@
   "alias": {
     "mock": "./mock",
     "process": false
+  },
+  "@parcel/bundler-default": {
+    "minBundles": 2,
+    "minBundleSize": 3000,
+    "maxParallelRequests": 20
   }
 }
