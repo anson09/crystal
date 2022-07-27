@@ -10,7 +10,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { storeToRefs } from "pinia";
-import { ElMessage } from "element-plus";
+import { ElMessage } from "element-plus/es/components/message/index.mjs";
 import { useCommonStore } from "../store/common";
 
 const store = useCommonStore();

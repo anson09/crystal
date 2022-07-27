@@ -1,4 +1,4 @@
-import { ElButton } from "element-plus";
+import { ElButton } from "element-plus/es/components/button/index.mjs";
 import "element-plus/es/components/button/style/css.mjs";
 import "element-plus/es/components/message/style/css.mjs";
 
