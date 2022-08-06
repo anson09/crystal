@@ -1,9 +1,9 @@
 import ky from "ky";
 
-const api = ky.create({ prefixUrl: "/api/xxx/" });
+const api = ky.create({ prefixUrl: "/api/path/" });
 
-function getYyy() {
-  return api.get("yyy").json();
+function getSomething() {
+  return api.get("Something").json();
 }
 
-export { getYyy };
+export { getSomething };

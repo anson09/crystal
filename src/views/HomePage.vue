@@ -1,9 +1,10 @@
 <template>
-  <h1>{{ message }}</h1>
+  <h1>{{ title }}</h1>
   <div class="counter">
     <p>{{ a }} + {{ b }} = {{ sum }}</p>
-    <el-button size="small" @click="add">add</el-button>
-    <el-button size="small" @click="reset">reset</el-button>
+    <el-button size="small" @click="incrementA">a++</el-button>
+    <el-button size="small" @click="incrementB">b++</el-button>
+    <el-button size="small" @click="store.$reset">reset</el-button>
   </div>
 </template>
 
@@ -11,31 +12,25 @@
 import { ref, onMounted } from "vue";
 import { storeToRefs } from "pinia";
 import { ElMessage } from "element-plus/es/components/message/index.mjs";
-import { useCommonStore } from "../store/common";
+import { useCountStore } from "../store/count";
+import { randomColor } from "../util";
 
-const store = useCommonStore();
+const store = useCountStore();
 const { a, b, sum } = storeToRefs(store);
-const message = ref("crystal starter");
+const { incrementA, incrementB } = store;
+
+const title = ref("crystal starter");
 const color = ref("red");
 
-function add() {
-  a.value += 1;
-  b.value += 2;
-}
-
-function reset() {
-  store.$reset();
-}
+setInterval(() => {
+  color.value = randomColor();
+}, 5000);
 
 onMounted(() => {
   ElMessage({
     message: "this is a message.",
     type: "success",
   });
-
-  setTimeout(() => {
-    color.value = "black";
-  }, 5000);
 });
 </script>
 
