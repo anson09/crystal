@@ -29,8 +29,10 @@ pipeline {
             }
             stage('Build') {
                 steps {
-                    sh "npm run clean"
-                    sh "PARCEL_WORKER_BACKEND=process npm run build"
+                    retry (3) {
+                        sh "npm run clean"
+                        sh "PARCEL_WORKER_BACKEND=process npm run build"
+                    }
                 }
             }
             stage('ST Deploy') {
