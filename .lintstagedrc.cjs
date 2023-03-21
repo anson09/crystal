@@ -26,6 +26,6 @@ function rules(...args) {
 module.exports = {
   "*.vue": rules(eslint, stylelint, prettier),
   "*.js": rules(eslint, prettier),
-  "*.scss": rules(stylelint, prettier),
+  "*.css": rules(stylelint, prettier),
   "*.{html,yml,json,md}": rules(prettier),
 };

@@ -4,7 +4,7 @@ import router from "./router";
 
 import "normalize.css";
 import element from "./components/element-ui";
-import "./style/index.scss";
+import "./style/index.css";
 import App from "./App.vue";
 
 /* eslint-disable */

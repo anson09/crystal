@@ -1,17 +1,3 @@
 extends:
-  - stylelint-config-standard-scss
-  - stylelint-config-prettier
-overrides:
-  - files:
-      - "**/*.vue"
-    customSyntax: postcss-html
-rules:
-  selector-pseudo-class-no-unknown:
-    - true
-    - ignorePseudoClasses:
-        - deep
-        - global
-        - slotted
-  selector-class-pattern:
-    - "^([a-z][a-z0-9]*)((-|_)+[a-z0-9]+)*$"
-    - message: "Expected class selector to be kebab-case"
+  - stylelint-config-standard
+  - stylelint-config-standard-vue

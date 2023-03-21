@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 div {
   height: 100vh;
   display: grid;

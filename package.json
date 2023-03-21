@@ -30,51 +30,54 @@
     "postpack": "./scripts/hook.sh --enable"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1",
+    "@babel/eslint-parser": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@parcel/transformer-sass": "^2.8.0",
-    "@parcel/transformer-vue": "^2.8.0",
-    "commit-and-tag-version": "^10.1.0",
-    "eslint": "^8.29.0",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@parcel/transformer-vue": "^2.8.3",
+    "commit-and-tag-version": "^11.2.0",
+    "eslint": "^8.36.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-vue": "^9.8.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
-    "parcel": "^2.8.0",
-    "postcss": "^8.4.19",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "parcel": "^2.8.3",
     "postcss-html": "^1.5.0",
-    "prettier": "^2.8.0",
-    "stylelint": "^14.16.0",
-    "stylelint-config-prettier": "^9.0.4",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "prettier": "^2.8.6",
+    "stylelint": "^15.3.0",
+    "stylelint-config-standard": "^31.0.0",
+    "stylelint-config-standard-vue": "^1.0.0"
   },
   "dependencies": {
-    "@vueuse/core": "^9.6.0",
+    "@vueuse/core": "^9.13.0",
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
-    "element-plus": "^2.2.26",
+    "element-plus": "^2.3.1",
     "exceljs": "^4.3.0",
-    "highcharts": "^10.3.2",
+    "highcharts": "^10.3.3",
     "intro.js": "^6.0.0",
     "jwt-decode": "^3.1.2",
-    "ky": "^0.32.2",
+    "ky": "^0.33.3",
     "lodash": "^4.17.21",
-    "lottie-web": "^5.10.0",
+    "lottie-web": "^5.10.2",
     "normalize.css": "^8.0.1",
-    "pinia": "^2.0.27",
-    "vant": "^4.0.2",
+    "pinia": "^2.0.33",
+    "vant": "^4.1.1",
     "vconsole": "^3.15.0",
-    "vue": "^3.2.45",
+    "vue": "^3.2.47",
     "vue-router": "^4.1.6",
-    "vxe-table": "^4.3.6"
+    "vxe-table": "^4.3.11"
   },
   "alias": {
     "mock": "./mock",
     "process": false
+  },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "nesting": true
+    }
   }
 }

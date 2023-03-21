@@ -1,4 +1,4 @@
-//! update comment line to your repo url (github is not need config)
+// update comment line to your repo url (github is not need config)
 // const URL = "http://git.ricequant.com/projects/NODE/repos/crystal";
 module.exports = {
   types: [

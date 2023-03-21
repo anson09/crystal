@@ -34,7 +34,7 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 h1 {
   text-align: center;
   color: v-bind(color);
@@ -46,7 +46,7 @@ h1 {
   align-items: center;
   justify-content: center;
 
-  p {
+  & p {
     margin-right: 10px;
   }
 }
