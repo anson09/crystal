@@ -1,16 +1,18 @@
 # CRYSTAL
 
-Web project fork from here with zero-config to start a spa application, default including:
+This is a **zero config** SPA boilerplate
 
-- Vue app skeleton
-- code linter/styler
-- fundamental dependencies
-- enterprise workflow (dev/build/deploy/publish)
+Web project forks me 🧤,
 
-## Quick Start
+Including 🥣 :
 
-1. npm run start
+- Vue3 App Skeleton with `Pinia` `Vue-router`
+- Configured `ESLint` `StyleLint` `Prettier` `CommitLint` `Husky` `Lint-Staged`
+- Kinds of Fundamental dependencies like `@vueuse/core` `Highcharts`
+- Fast Develop and Preview workflow powered by `Parcel`
 
-## Online Preview
+## Just Typing 🚀
 
-https://anka.ricequant.com:8085/crystal/
+```bash
+npm run start
+```
